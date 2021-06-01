@@ -37,7 +37,7 @@ const CheckoutForm = ({datos, tienda, pago, domicilio}) =>{
     if(!error){
       const { id } = paymentMethod;
 
-      const {data} = await axios.post('http://194.163.138.149:1338/', {
+      const {data} = await axios.post('https://api.elchocolatin.com/', {
         id,
         amount: pago*100,
         description: `${domicilio === true ? '*ENTREGA A DOMICILIO*' : '*ENTREGA EN TIENDA*'} ||, ${tienda.map(producto => (
@@ -61,7 +61,7 @@ const CheckoutForm = ({datos, tienda, pago, domicilio}) =>{
         color: '#424770',
         '::placeholder': {
           color: '#aab7c4',
-          padding: '10px',
+
           
         },
       },
@@ -100,7 +100,6 @@ export default function Datos({tienda, pago, domicilio}) {
           ...datos,
           [e.target.name]: e.target.value
         })
-        console.log(datos);
         
       }
 

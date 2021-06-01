@@ -19,7 +19,7 @@ export default function Producto({producto}) {
             alert('El producto ya fue agregado, modificalo en el carrito')
         }else{
             setTienda((prevTienda) => prevTienda.concat({...producto, cantidad: Cantidad}))
-            console.log(Tienda);
+            
         }
     }
 

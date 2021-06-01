@@ -1,5 +1,5 @@
 import React from 'react'
-import scss from './menu.module.scss'
+import scss from './Menu.module.scss'
 import Link from 'next/link';
 
 export default function Menu() {
